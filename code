@@ -1,0 +1,10 @@
+class Solution:
+    def maximumProfit(self, prices) -> int:
+        profit = 0
+        # Loop through the prices array
+        for i in range(1, len(prices)):
+            # If the price on the current day is greater than the previous day
+            if prices[i] > prices[i - 1]:
+                # Add the difference to the profit
+                profit += prices[i] - prices[i - 1]
+        return profit
